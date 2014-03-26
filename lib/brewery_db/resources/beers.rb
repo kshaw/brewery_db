@@ -8,6 +8,10 @@ module BreweryDB
       def find(id, params={})
         get('beer/%s' % id, params).data
       end
+
+      def breweries(id, params={})
+        get('beer/%s/breweries' % id, params).data
+      end
     end
   end
 end
